@@ -9,7 +9,6 @@ sequenceDiagram
 
     loop Rewards
         Validators -->> Protocol: generates reward
-        Protocol -->> Protocol: kepts VARA (10% of reward)
         Protocol -->> User: transfers VARA (90% of reward)
     end
 
