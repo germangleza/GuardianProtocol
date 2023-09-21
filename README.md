@@ -1,7 +1,6 @@
+# Guardian Protocol
 
-
-# Gear Template for Dapps 
-
+```mermaid
 sequenceDiagram
     autonumber
     User ->> Protocol: stakes VARA
@@ -16,6 +15,7 @@ sequenceDiagram
     User ->> Protocol: action Withdraw
     Protocol ->> User: burns gVARA
     Protocol ->> User: transfers VARA
+```
 
 ## Description
 
