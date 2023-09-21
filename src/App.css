@@ -1,0 +1,54 @@
+
+#root {
+  max-width: 1400px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+  background:black; 
+  color: white;
+}
+
+main {
+  background: black;
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s linear infinite;
+  color: white;
+  border: 5px solid #F8AD18;
+  border-radius: 15px;
+}
+
+
+body {
+  background: black !important;
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s linear infinite;
+  color: white;
+}
+
+.tablist:active{
+  background: yellow !important;
+}
+
+/* styles.css */
+
+.table-content th, .table-content td {
+  color: white;
+}
+.table-content td {
+  border:none;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
