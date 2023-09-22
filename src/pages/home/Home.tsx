@@ -5,12 +5,12 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel,Table,
   Th,
   Td,
   TableCaption,
-  TableContainer,Button, } from '@chakra-ui/react'
+  TableContainer,Button, background,extendTheme} from '@chakra-ui/react'
 
 function Home() {
 
   return (
-<Tabs isFitted variant='enclosed'>
+<Tabs isFitted variant='enclosed' style={{ borderColor: '#F8AD18' }} >
   <TabList mb='1em'>
         <Tab _selected={{ bg: '#F8AD18' }}>Stake</Tab>
         <Tab _selected={{ bg: '#F8AD18' }}>Unstake</Tab>
@@ -27,25 +27,29 @@ function Home() {
     <TableCaption>Imperial to metric conversion factors</TableCaption>
     
     <Tbody >
-      <Tr style={{ color: 'white' }} >
-        <Th>Amount</Th>
-        <Th>.</Th>
-        <Th isNumeric>Available: 0.0 VARA</Th>
+      <Tr  id='espacio' >
+        <Td>Amount</Td>
+        <Td style={{ visibility: 'hidden' }}>.</Td>
+        <Td isNumeric textAlign='end'>Available: 0.0 VARA</Td>
       </Tr>
+     
+     <Tr borderRadius="20px" textColor='white' marginBottom='5px' style={{ color: 'white',border:'3px solid #F8AD18' }}>
+     <Td style={{ backgroundImage: `url('https://varathon.io/images/homepage/about-logo.svg')`, backgroundRepeat: 'no-repeat', backgroundSize: 'contain',paddingRight:'10px' }}>
+    0.0
+  </Td>
+        <Td style={{ visibility: 'hidden' }}>.</Td>
+        <Td id='end' ><Button>MAX</Button></Td>
+      </Tr>
+      
     
-      <Tr  textColor='white'>
-        <Td isNumeric>0.0</Td>
-        <Td>.</Td>
-        <Td><Button >MAX</Button></Td>
-      </Tr>
     
       <Tr textColor='white'>
-        <Td>YOU WILL RECIEVE</Td>
-        <Td>.</Td>
-        <Td isNumeric>0.0 gVARA</Td>
+        <Td fontWeight='bold' >You will recieve</Td>
+        <Td style={{ visibility: 'hidden' }}>.</Td>
+        <Td isNumeric textAlign='end' fontWeight='bold'>0.0 gVARA</Td>
       </Tr>
 
-      <Tr>
+      <Tr style={{ visibility: 'hidden' }}>
         <Td>.</Td>
         <Td>.</Td>
         <Td isNumeric>.</Td>
@@ -53,20 +57,20 @@ function Home() {
       
       <Tr textColor='white'>
         <Td>Stake APY%</Td>
-        <Td>.</Td>
-        <Td isNumeric>-4.00%</Td>
+        <Td style={{ visibility: 'hidden' }}>.</Td>
+        <Td isNumeric textAlign='end'>-4.00%</Td>
       </Tr>
       
-      <Tr textColor='white'>
-        <Th>Staking Fee</Th>
-        <Th>.</Th>
-        <Th isNumeric>0.0</Th>
+      <Tr textColor='white' >
+        <Td>Staking Fee</Td>
+        <Td style={{ visibility: 'hidden' }}>.</Td>
+        <Td isNumeric textAlign='end'>0.0%</Td>
       </Tr>
     
-      <Tr textColor='white'>
-        <Th>Reward Fee</Th>
-        <Th>.</Th>
-        <Th isNumeric>10%</Th>
+      <Tr textColor='white' >
+        <Td>Reward Fee</Td>
+        <Td style={{ visibility: 'hidden' }}>.</Td>
+        <Td isNumeric textAlign='end'>10%</Td>
       </Tr>
 
     </Tbody>
