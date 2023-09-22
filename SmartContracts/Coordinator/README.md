@@ -16,3 +16,10 @@ sequenceDiagram
     Protocol ->> User: burns gVARA
     Protocol ->> User: transfers VARA
 ```
+
+## TODO
+
+- [ ] handle Stake
+- [ ] trigger event Mint
+- [ ] transfer vara to validators
+- [ ] handle mint

@@ -1,6 +1,6 @@
 #![no_std]
 
-#[cfg(not(feature = "binary-vendor"))]
+// #[cfg(not(feature = "binary-vendor"))]
 mod contract;
 
 // See `Cargo.toml` for the description of the "binary-vendor" feature.

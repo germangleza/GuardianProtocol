@@ -493,21 +493,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6245d59a3e82a7fc217c5828a6692dbc6dfb63a0c8c90495621f7b9d79704a0e"
 
 [[package]]
-name = "coodinator"
-version = "0.1.0"
-dependencies = [
- "gclient",
- "gear-wasm-builder",
- "gmeta",
- "gstd",
- "gtest",
- "hashbrown 0.14.0",
- "io",
- "state",
- "tokio",
-]
-
-[[package]]
 name = "core-foundation"
 version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1187,6 +1172,27 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0845fa252299212f0389d64ba26f34fa32cfe41588355f21ed507c59a0f64541"
 
 [[package]]
+name = "ft-io"
+version = "0.1.7"
+source = "git+https://github.com/gear-dapps/fungible-token?tag=0.1.8#c4ee49894cd2e727013307e20af2c8dbd6a89c34"
+dependencies = [
+ "gmeta",
+ "gstd",
+]
+
+[[package]]
+name = "fungible-token"
+version = "0.1.7"
+source = "git+https://github.com/gear-dapps/fungible-token?tag=0.1.8#c4ee49894cd2e727013307e20af2c8dbd6a89c34"
+dependencies = [
+ "ft-io",
+ "gear-wasm-builder",
+ "gmeta",
+ "gstd",
+ "hashbrown 0.14.0",
+]
+
+[[package]]
 name = "funty"
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1689,6 +1695,24 @@ dependencies = [
  "parity-scale-codec",
  "path-clean",
  "rand 0.8.5",
+]
+
+[[package]]
+name = "guardian_protocol"
+version = "0.1.0"
+dependencies = [
+ "ft-io",
+ "fungible-token",
+ "gclient",
+ "gear-wasm-builder",
+ "gmeta",
+ "gsdk",
+ "gstd",
+ "gtest",
+ "hashbrown 0.14.0",
+ "io",
+ "state",
+ "tokio",
 ]
 
 [[package]]
