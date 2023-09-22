@@ -18,6 +18,8 @@ main {
   color: white;
   border: 5px solid #F8AD18;
   border-radius: 15px;
+  width: 60%;
+  margin-left: 20%;
 }
 
 
@@ -32,14 +34,41 @@ body {
   background: yellow !important;
 }
 
-/* styles.css */
 
 .table-content th, .table-content td {
   color: white;
 }
 .table-content td {
   border:none;
+  padding-bottom: 1px;
 }
+
+#start{
+  text-align: start !important;
+}
+
+#end{
+  text-align: end !important;
+}
+
+#radius{
+  border: 3px solid #F8AD18;
+  
+}
+
+#boton{
+  background: transparent !important;
+  color: white;
+}
+
+.radio{
+  border-radius: 20px !important;
+}
+
+#espacio{
+  padding-bottom: 5px !important;
+}
+
 
 @keyframes gradientAnimation {
   0% {
