@@ -25,7 +25,7 @@ function Account() {
       {account ? (
         <Wallet balance={account.balance} address={account.address} name={account.meta.name} onClick={openModal} />
       ) : (
-        <Button backgroundColor="yellow" onClick={openModal}> Connect Your Wallet</Button>
+        <Button backgroundColor="#F8AD18" color='white' onClick={openModal}> Connect Your Wallet</Button>
       )}
       {isModalOpen && <AccountsModal accounts={accounts} close={closeModal} />}
     </>
