@@ -15,9 +15,9 @@ function Home() {
 
 <Tabs isFitted variant='enclosed' style={{ borderColor: '#F8AD18' }} >
   <TabList mb='1em'>
-        <Tab _selected={{ bg: '#F8AD18' }}>Stake</Tab>
-        <Tab _selected={{ bg: '#F8AD18' }}>Unstake</Tab>
-        <Tab _selected={{ bg: '#F8AD18' }}>Withdraw</Tab>
+        <Tab _selected={{ bg: '#F8AD18' }}  borderBottom='2px solid #F8AD18'>Stake</Tab>
+        <Tab _selected={{ bg: '#F8AD18' }} borderBottom='2px solid #F8AD18' borderRight='2px solid #F8AD18'>Unstake</Tab>
+        <Tab _selected={{ bg: '#F8AD18' }} borderBottom='2px solid #F8AD18'>Withdraw</Tab>
   </TabList>
   
    
@@ -27,7 +27,7 @@ function Home() {
 
       <TableContainer>
     <Table variant='simple' colorScheme='teal' className='table-content' >
-    <TableCaption>Imperial to metric conversion factors</TableCaption>
+    
     
     <Tbody >
       <Tr  id='espacio' style={{ marginBottom: '3px !important' }} >
@@ -36,7 +36,7 @@ function Home() {
         <Td isNumeric textAlign='end'>Available: 0.0 VARA</Td>
       </Tr>
      
-     <Tr borderRadius="20px" textColor='white' marginBottom='5px' style={{color: 'white',border: '3px solid #F8AD18'}}>
+     <Tr borderRadius="20px" textColor='white' marginBottom='5px' style={{color: 'white',border: '2px solid #F8AD18'}}>
      <Td style={{ 
     backgroundImage: `url('https://varathon.io/images/homepage/about-logo.svg')`, 
     backgroundRepeat: 'no-repeat', 
@@ -65,7 +65,7 @@ function Home() {
       <Tr textColor='white'>
         <Td>Stake APY%</Td>
         <Td style={{ visibility: 'hidden' }}>.</Td>
-        <Td isNumeric textAlign='end'>-4.00%</Td>
+        <Td isNumeric textAlign='end'>˜4.00%</Td>
       </Tr>
       
       <Tr textColor='white' >
@@ -82,7 +82,7 @@ function Home() {
 
       <Tr>
         <Td style={{ visibility: 'hidden' }}>.</Td>
-        <Td ><Button colorScheme='teal' size='lg' style={{color:'black',background:'#F8AD18'}} >Connect Wallet</Button></Td>
+        <Td ><Button colorScheme='teal' size='lg' style={{color:'black',background:'#F8AD18',width:'240px'}} >Stake</Button></Td>
         <Td style={{ visibility: 'hidden' }}>.</Td>
       </Tr>
 
@@ -94,12 +94,11 @@ function Home() {
  </TabPanel>
     
     
-    
     <TabPanel>
-      <p>two!</p>
+      
       <TableContainer>
     <Table variant='simple' colorScheme='teal' className='table-content' >
-    <TableCaption>Imperial to metric conversion factors</TableCaption>
+    
     
     <Tbody >
       <Tr  id='espacio' style={{ marginBottom: '3px !important' }} >
@@ -154,7 +153,7 @@ function Home() {
 
       <Tr>
         <Td style={{ visibility: 'hidden' }}>.</Td>
-        <Td ><Button colorScheme='teal' size='lg' style={{color:'black',background:'#F8AD18',width:'100%'}} >Unstake</Button></Td>
+        <Td ><Button colorScheme='teal' size='lg' style={{color:'black',background:'#F8AD18',width:'240px'}} >Unstake</Button></Td>
         <Td style={{ visibility: 'hidden' }}>.</Td>
       </Tr>
 
@@ -168,10 +167,10 @@ function Home() {
  
     
     <TabPanel>
-      <p>three!</p>
+      
       <TableContainer>
     <Table variant='simple' colorScheme='teal' className='table-content' >
-    <TableCaption>Imperial to metric conversion factors</TableCaption>
+   
     
     <Tbody >
       <Tr  id='espacio' style={{ marginBottom: '3px !important' }} >
@@ -215,7 +214,7 @@ function Home() {
 
       <Tr>
         <Td style={{ visibility: 'hidden' }}>.</Td>
-        <Td ><Button colorScheme='teal' size='lg' style={{color:'black',background:'#F8AD18',width:'100%'}} >Withdraw</Button></Td>
+        <Td ><Button colorScheme='teal' size='lg' style={{color:'black',background:'#F8AD18',width:'240px',marginLeft:'43px'}} >Withdraw</Button></Td>
         <Td style={{ visibility: 'hidden' }}>.</Td>
       </Tr>
 
