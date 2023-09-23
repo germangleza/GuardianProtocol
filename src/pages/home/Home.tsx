@@ -48,7 +48,7 @@ function Home() {
     backgroundRepeat: 'no-repeat', 
     backgroundSize: 'contain', 
     paddingLeft: '50px' }}>
-    <Box p={1}><Textarea placeholder="0.0"/></Box>
+    <Box p={1}><Textarea placeholder="0.0" marginLeft='5px' /></Box>
   </Td>
         <Td style={{ visibility: 'hidden' }}>.</Td>
         <Td id='end' ><Button position='inherit' marginBottom='7px' >MAX</Button></Td>
