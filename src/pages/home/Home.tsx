@@ -5,7 +5,7 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel,Table,
   Th,
   Td,
   TableCaption,
-  TableContainer,Button, background,extendTheme} from '@chakra-ui/react'
+  TableContainer,Button, background,extendTheme,Textarea,Box} from '@chakra-ui/react'
 import { assets } from '@polkadot/types/interfaces/definitions';
 
 import { Input } from "@gear-js/ui";
@@ -39,7 +39,14 @@ function Home() {
       <Tr  id='espacio' style={{ marginBottom: '3px !important' }} >
         <Td>Amount</Td>
         <Td style={{ visibility: 'hidden' }}>.</Td>
-        <Td isNumeric textAlign='end'>Available: 0.0 VARA<Input placeholder="Escribe algo aquí" /></Td>
+        <Td isNumeric textAlign='end'>Available: 0.0 VARA <Box p={4}>
+      <Textarea
+        placeholder="0.0"
+        value={texto}
+        onChange={handleTextoChange}
+        size="md" // Tamaño del área de texto
+      />
+    </Box> </Td>
       </Tr>
      
      <Tr borderRadius="20px" textColor='white' marginBottom='5px' style={{color: 'white',border: '2px solid #F8AD18'}}>
