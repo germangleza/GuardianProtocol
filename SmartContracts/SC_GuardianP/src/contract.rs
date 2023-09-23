@@ -1,7 +1,8 @@
+use ft;
+use ft_io;
 use gclient::GearApi;
 use gmeta::Metadata;
 use gsdk;
-use gsdk::metadata::runtime_types::gear_core::ids::ProgramId;
 use gstd::{errors::Result, msg, prelude::*, ActorId};
 use hashbrown::HashMap;
 use io::*;
@@ -28,11 +29,11 @@ async fn get_validator() -> ActorId {
 /// suri: Substrate URI, with format URI:password
 /// to: destination address
 /// amount: value of VARA token to transfer
-async fn transfer(from: gclient::WSAddress, suri: impl AsRef<str>, to: ProgramId, amount: u128) {
+async fn transfer(from: gclient::WSAddress, suri: impl AsRef<str>, to: ActorId, amount: u128) {
     gclient::GearApi::init_with(from, suri)
         .await
         .expect("Error at init client")
-        .transfer(to, amount)
+        .transfer(to.into(), amount)
         .await
         .expect("Error at transfer");
 }
@@ -49,8 +50,15 @@ async fn main() {
             // modify LSTAKING with the new transaction
             // transfer the `amount` of VARA to a random validator
             let validator = get_validator().await;
+            // the domain and port must correspond with the sender
+            // TODO: remove the dummy data
+            let from = gclient::WSAddress::try_new("ws://127.0.0.1", 9944).expect("Invalid params");
+            let suri = "//Alice:5678";
+            transfer(from, suri, validator, amount);
 
             // mint `amount` of gVARA for the caller
+            msg::send_for_reply_as(*token_id, FTAction::Approve { to: *to, amount }, 0, 0);
+            ft_io::FTAction::Mint(amount);
         }
         Action::Withdraw(amount) => {}
     };
