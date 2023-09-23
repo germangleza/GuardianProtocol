@@ -36,6 +36,7 @@ sequenceDiagram
 
 - [ ] (smart-contract) implement rewards functionality
     - [ ] `claim` the VARA rewards from the validator
+    - [ ] `transfer` the VARA to the owner of the GuardianProtocol
     - [ ] `register` the rewards in the stake register of the user
 
     Currently, the GuardianProtocol will claim the rewards
@@ -43,5 +44,7 @@ sequenceDiagram
     eventually withdrawn more VARA than the amount deposited.
 
 - [ ] (smart-contract) implement `Action::Withdrawn`
-    - [ ] 
+    - [ ] given the register, check the rewards for the user
+    - [ ] `burn` the amount of gVARA tokens
+    - [ ] `transfer` the corresponding VARA to the user
 
