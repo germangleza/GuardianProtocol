@@ -39,7 +39,7 @@ function Home() {
       <Tr  id='espacio' style={{ marginBottom: '3px !important' }} >
         <Td>Amount</Td>
         <Td style={{ visibility: 'hidden' }}>.</Td>
-        <Td isNumeric textAlign='end'>Available: 0.0 VARA</Td>
+        <Td isNumeric textAlign='end'>Available: 0.0 VARA<Input placeholder="Escribe algo aquí" /></Td>
       </Tr>
      
      <Tr borderRadius="20px" textColor='white' marginBottom='5px' style={{color: 'white',border: '2px solid #F8AD18'}}>
