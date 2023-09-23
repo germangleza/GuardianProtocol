@@ -39,14 +39,7 @@ function Home() {
       <Tr  id='espacio' style={{ marginBottom: '3px !important' }} >
         <Td>Amount</Td>
         <Td style={{ visibility: 'hidden' }}>.</Td>
-        <Td isNumeric textAlign='end'>Available: 0.0 VARA <Box p={4}>
-      <Textarea
-        placeholder="0.0"
-        value={texto}
-        onChange={handleTextoChange}
-        size="md" // Tamaño del área de texto
-      />
-    </Box> </Td>
+        <Td isNumeric textAlign='end'>Available: 0.0 VARA</Td>
       </Tr>
      
      <Tr borderRadius="20px" textColor='white' marginBottom='5px' style={{color: 'white',border: '2px solid #F8AD18'}}>
@@ -55,7 +48,7 @@ function Home() {
     backgroundRepeat: 'no-repeat', 
     backgroundSize: 'contain', 
     paddingLeft: '50px' }}>
-    0.0
+    <Box p={1}><Textarea placeholder="0.0"/></Box>
   </Td>
         <Td style={{ visibility: 'hidden' }}>.</Td>
         <Td id='end' ><Button position='inherit' marginBottom='7px' >MAX</Button></Td>
