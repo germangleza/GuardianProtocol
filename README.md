@@ -23,11 +23,11 @@ sequenceDiagram
 
 - [ ] (smart-contract) implement `Action::Stake`
     The criteria points to select a validator will be:
-        * Era points
-        * Staked `$VARA` token
-        * Rewards (ammount or percentage)
-        * No experienced slashes
-        * Commissions
+        - Era points
+        - Staked `$VARA` token
+        - Rewards (ammount or percentage)
+        - No experienced slashes
+        - Commissions
     - [x] `get` the address of a validator
     - [x] `transfer` VARA from user to the validator
     - [x] `mint` gVARA for the user
